@@ -1,0 +1,18 @@
+{
+  "cpu": 1,
+  "ram_mb": 1024,
+  "ethernet": 4,
+  "arch": "x86_64",
+  "nic": "virtio-net-pci",
+  "console": "telnet",
+  "qemu_args": [
+    "-machine",
+    "type=pc-1.0,accel=kvm",
+    "-vga",
+    "std",
+    "-usbdevice",
+    "tablet",
+    "-boot",
+    "order=dc"
+  ]
+}

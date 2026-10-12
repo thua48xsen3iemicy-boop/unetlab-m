@@ -1,0 +1,15 @@
+{
+  "cpu": 1,
+  "ram_mb": 2048,
+  "ethernet": 6,
+  "arch": "x86_64",
+  "nic": "virtio-net-pci",
+  "console": "telnet",
+  "qemu_args": [
+    "-machine",
+    "type=pc-1.0,accel=kvm",
+    "-serial",
+    "mon:stdio",
+    "-nographic"
+  ]
+}

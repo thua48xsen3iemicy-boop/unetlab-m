@@ -1,0 +1,44 @@
+# One Compose project is one attempt. The parent selects the host and supplies
+# ticket.json, lab.unl, immutable templates and the attempt's progress directory.
+services:
+  puskalka:
+    build:
+      context: .
+    image: puskalka:local
+    command: ["run", "--ticket", "/ticket/ticket.json", "--listen", "0.0.0.0", "--port", "8080"]
+    devices:
+      - /dev/kvm:/dev/kvm
+      - /dev/net/tun:/dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /run:rw,nosuid,nodev,size=64m
+      - /tmp:rw,nosuid,nodev,size=64m
+    volumes:
+      - type: bind
+        source: ${TICKET_DIR:?Set TICKET_DIR to the directory containing ticket.json and lab.unl}
+        target: /ticket
+        read_only: true
+      - type: bind
+        source: ${TEMPLATES_DIR:?Set TEMPLATES_DIR to the immutable template directory}
+        target: /templates
+        read_only: true
+      - type: bind
+        source: ${PROGRESS_DIR:?Set PROGRESS_DIR to this attempt's progress directory}
+        target: /progress
+    networks:
+      - management
+    stop_grace_period: 60s
+    # The parent must set limits from the complete lab resource budget:
+    # mem_limit: ${LAB_MEMORY_LIMIT}
+    # cpus: ${LAB_CPU_LIMIT}
+    # API/VNC/Telnet have no host port publication. The parent and guacd reach
+    # the container through the management network.
+
+networks:
+  management:
+    external: true
+    name: ${MANAGEMENT_NETWORK:?Set MANAGEMENT_NETWORK to the parent's existing Docker network}

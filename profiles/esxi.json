@@ -1,0 +1,23 @@
+{
+  "cpu": 2,
+  "ram_mb": 4096,
+  "ethernet": 4,
+  "arch": "x86_64",
+  "nic": "e1000",
+  "console": "vnc",
+  "qemu_args": [
+    "-machine",
+    "pc,accel=kvm",
+    "-serial",
+    "none",
+    "-nographic",
+    "-nodefconfig",
+    "-nodefaults",
+    "-display",
+    "none",
+    "-vga",
+    "std",
+    "-rtc",
+    "base=utc"
+  ]
+}

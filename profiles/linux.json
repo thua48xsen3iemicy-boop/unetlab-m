@@ -1,0 +1,19 @@
+{
+  "cpu": 1,
+  "ram_mb": 1024,
+  "ethernet": 2,
+  "arch": "x86_64",
+  "nic": "virtio-net-pci",
+  "console": "vnc",
+  "qemu_args": [
+    "-machine",
+    "pc",
+    "-vga",
+    "std",
+    "-usb",
+    "-device",
+    "usb-tablet",
+    "-boot",
+    "order=dc"
+  ]
+}

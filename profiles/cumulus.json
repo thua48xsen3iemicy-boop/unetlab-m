@@ -1,0 +1,15 @@
+{
+  "cpu": 1,
+  "ram_mb": 256,
+  "ethernet": 3,
+  "arch": "x86_64",
+  "nic": "virtio-net-pci",
+  "console": "vnc",
+  "qemu_args": [
+    "-machine",
+    "type=pc-1.0,accel=kvm",
+    "-nographic",
+    "-rtc",
+    "base=utc"
+  ]
+}

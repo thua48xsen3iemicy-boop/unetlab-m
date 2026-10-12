@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lab name="Two Linux nodes" id="70bcb98d-5655-4e87-a1b3-266e9287d42d" version="1">
+  <topology>
+    <nodes>
+      <node id="1" name="Client" type="qemu" template="linux" image="linux/v1"
+            cpu="1" ram="512" ethernet="2" console="vnc">
+        <interface id="0" name="eth0" type="ethernet" network_id="1" />
+      </node>
+      <node id="2" name="Server" type="qemu" template="linux" image="linux/v1"
+            cpu="1" ram="512" ethernet="2" console="vnc">
+        <interface id="0" name="eth0" type="ethernet" network_id="1" />
+      </node>
+    </nodes>
+    <networks>
+      <network id="1" type="bridge" name="LAN" />
+    </networks>
+  </topology>
+</lab>

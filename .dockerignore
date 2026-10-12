@@ -1,0 +1,13 @@
+# The image contains the runner and its supported node profiles only.
+**
+!Dockerfile
+!runner/
+!runner/**
+!profiles/
+!profiles/**
+runner/**/__pycache__/
+runner/**/*.pyc
+runner/**/*.pyo
+!assets/
+!assets/**
+!LICENSE

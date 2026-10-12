@@ -1,0 +1,25 @@
+{
+  "cpu": 1,
+  "ram_mb": 2048,
+  "ethernet": 5,
+  "arch": "i386",
+  "nic": "e1000",
+  "console": "telnet",
+  "qemu_args": [
+    "-machine",
+    "type=pc-1.0",
+    "-serial",
+    "mon:stdio",
+    "-nographic",
+    "-nodefconfig",
+    "-nodefaults",
+    "-rtc",
+    "base=utc",
+    "-no-shutdown",
+    "-boot",
+    "order=c",
+    "-smbios",
+    "type=1,product=IPS-4240/4255,version=1.0,family=IPS-4240/4255"
+  ],
+  "source_qemu_version": "1.3.1"
+}
