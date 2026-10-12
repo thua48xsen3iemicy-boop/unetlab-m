@@ -1,0 +1,18 @@
+{
+  "cpu": 1,
+  "ram_mb": 2048,
+  "ethernet": 1,
+  "arch": "x86_64",
+  "nic": "e1000",
+  "console": "vnc",
+  "qemu_args": [
+    "-machine",
+    "type=pc-1.0,accel=kvm",
+    "-vga",
+    "std",
+    "-usbdevice",
+    "tablet",
+    "-boot",
+    "order=dc"
+  ]
+}

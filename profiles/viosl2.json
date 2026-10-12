@@ -1,0 +1,19 @@
+{
+  "cpu": 1,
+  "ram_mb": 768,
+  "ethernet": 4,
+  "arch": "i386",
+  "nic": "e1000",
+  "console": "telnet",
+  "qemu_args": [
+    "-machine",
+    "type=pc-1.0,accel=kvm",
+    "-serial",
+    "mon:stdio",
+    "-nographic",
+    "-nodefconfig",
+    "-nodefaults",
+    "-rtc",
+    "base=utc"
+  ]
+}

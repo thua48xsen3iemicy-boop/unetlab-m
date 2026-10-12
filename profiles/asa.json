@@ -1,0 +1,23 @@
+{
+  "cpu": 1,
+  "ram_mb": 512,
+  "ethernet": 4,
+  "arch": "i386",
+  "nic": "i82559er",
+  "console": "telnet",
+  "qemu_args": [
+    "-machine",
+    "type=pc-1.0,accel=tcg",
+    "-serial",
+    "mon:stdio",
+    "-nographic",
+    "-nodefconfig",
+    "-nodefaults",
+    "-rtc",
+    "base=utc",
+    "-smbios",
+    "type=1,product=asa5520",
+    "-icount",
+    "1"
+  ]
+}

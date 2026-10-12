@@ -47,3 +47,11 @@ crashlytics.properties
 crashlytics-build.properties
 
 # Created by .ignore support plugin (hsz.mobi)
+
+# Runtime assets and intermediate development files
+work/
+__pycache__/
+*.py[cod]
+*.qcow2
+*.iso
+*.sock

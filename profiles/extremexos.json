@@ -1,0 +1,17 @@
+{
+  "cpu": 1,
+  "ram_mb": 2048,
+  "ethernet": 3,
+  "arch": "x86_64",
+  "nic": "e1000",
+  "console": "telnet",
+  "qemu_args": [
+    "-machine",
+    "type=pc-1.0,accel=kvm",
+    "-cpu",
+    "Nehalem",
+    "-nographic",
+    "-rtc",
+    "base=utc"
+  ]
+}

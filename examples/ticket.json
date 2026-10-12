@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "ticket_id": "ticket-example-001",
+  "attempt_id": "attempt-example-001",
+  "issued_at": "2026-10-12T09:00:00Z",
+  "user": {"id": 42, "username": "student42"},
+  "lab": {
+    "id": "70bcb98d-5655-4e87-a1b3-266e9287d42d",
+    "version": "1",
+    "unl": "/ticket/lab.unl"
+  },
+  "storage": {"templates": "/templates", "progress": "/progress"},
+  "consoles": {"bind": "0.0.0.0", "vnc_base_port": 5900, "serial_base_port": 4000},
+  "node_overrides": {},
+  "external_networks": {}
+}

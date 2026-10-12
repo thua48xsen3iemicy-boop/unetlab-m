@@ -1,0 +1,27 @@
+{
+  "cpu": 1,
+  "ram_mb": 3072,
+  "ethernet": 4,
+  "arch": "x86_64",
+  "nic": "virtio-net-pci",
+  "console": "telnet",
+  "qemu_args": [
+    "-machine",
+    "type=pc,accel=kvm,usb=off",
+    "-serial",
+    "mon:stdio",
+    "-nographic",
+    "-nodefconfig",
+    "-nodefaults",
+    "-rtc",
+    "base=utc,driftfix=slew",
+    "-global",
+    "kvm-pit.lost_tick_policy=discard",
+    "-no-hpet",
+    "-realtime",
+    "mlock=off",
+    "-no-shutdown",
+    "-boot",
+    "order=c"
+  ]
+}

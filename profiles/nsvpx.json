@@ -1,0 +1,24 @@
+{
+  "cpu": 2,
+  "ram_mb": 2048,
+  "ethernet": 4,
+  "arch": "x86_64",
+  "nic": "virtio-net-pci",
+  "console": "telnet",
+  "qemu_args": [
+    "-machine",
+    "type=pc-1.0,accel=kvm",
+    "-serial",
+    "mon:stdio",
+    "-nographic",
+    "-nodefconfig",
+    "-nodefaults",
+    "-display",
+    "none",
+    "-vga",
+    "std",
+    "-rtc",
+    "base=utc"
+  ],
+  "source_qemu_version": "2.0.2"
+}
